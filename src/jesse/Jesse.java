@@ -10,14 +10,19 @@ package jesse;
  *
  * @author xuhao
  */
-public class Jesse 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import jesse.GA_ANN.*;
+
+public class Jesse
 {
-	//TODO 构建GUI
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+	public Jesse()
+	{
+	}
+    public static void main(String[] args)
+    {
+    	EvolutionControl.main(args);
     }
     
 }
