@@ -12,5 +12,7 @@ package jesse;
  */
 public interface Evo_Individual
 {
-    
+	void Vartion();
+	void Cross(Evo_Individual a);
+	double Appra();
 }
