@@ -30,7 +30,7 @@ public abstract class  Gene_Algorithm
 			Pop0.ConfP();
 
 			Evo_Individual best=Pop0.FindBest();
-			System.out.println(best.report());
+			System.out.println(best);
 			Poptem =new Population(maxn);
 			//reset sucessfully
 			//make new pop

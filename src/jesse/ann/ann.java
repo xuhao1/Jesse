@@ -15,15 +15,21 @@ import Jama.Matrix;
 
 public class ann
 {
-	Matrix hide,output,input2hide,hide2output;
+	protected Matrix hide,output,input2hide,hide2output;
 
 	public ann(int input_num,int hide_num,int output_num)
 	{
-		hide = 	new Matrix(1,hide_num);
-		output 	= new Matrix(1,output_num);
+		hide = 	new Matrix(hide_num,1);
+		output 	= new Matrix(output_num,1);
 		input2hide =new Matrix(input_num,hide_num);
 		hide2output=new Matrix(hide_num,output_num);
 		RandomLize();
+	}
+	public ann(Matrix input2hide,Matrix hide2output)
+	{
+		//TODO test 转型
+		this.input2hide=(Matrix) input2hide.clone();
+		this.hide2output=(Matrix) hide2output.clone();
 	}
 	public void RandomLize()
 	{
@@ -37,14 +43,23 @@ public class ann
 		for(int i=0;i<_array.length;i++)
 			for(int j=0;j<_array[i].length;j++)
 			{
-				_array[i][j]=Math.random()*0.1-0.05;
+				_array[i][j]=Math.random()*0.5-0.25;
 			}
 	}
 	public Matrix CalOut(Matrix input)
 	{
+		
+		System.out.println(PrintMat(input));
 		hide=Sigmoid(input.times(input2hide));
 		output=Sigmoid(hide.times(hide2output));	
+		
 		return output;
+	}
+
+	public double[] CalOut(double[] input)
+	{
+		//TODO test the Switch
+		return CalOut(new Matrix(input,1)).getArray()[0];
 	}
 
 	static Matrix Sigmoid(Matrix a)
@@ -76,10 +91,8 @@ public class ann
 
 	public static void main(String args[])
 	{
-		ann test=new ann(2,4,2);
-		double[][] input={{3,2}};
-		Matrix res=test.CalOut(new Matrix(input));
-		System.out.print(PrintMat(res));
-
+		double[] test={3,4};
+		ann testa=new ann(2,5,1);
+		System.out.println(testa.CalOut(test)[0]);
 	}
 }

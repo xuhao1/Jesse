@@ -61,7 +61,7 @@ public class Population
 		int i;
 		double[] P=new double[Number()];
 		for(i=0;i<Appra.length;i++)
-			P[i]=Math.exp(5/Appra[i]);
+			P[i]=Math.exp(Appra[i]);
 		for(i=0;i<Appra.length;i++)
 			sum+=P[i];
 		for(i=0;i<Appra.length;i++)

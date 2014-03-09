@@ -15,8 +15,8 @@ public interface Evo_Individual
 	void Varition();
 	void Cross(Evo_Individual a);
 	double Appra();
-	String report();
+	String toString();
 	void setP(double P);
 	double getP();
-	Evo_Individual clone();	
+	Evo_Individual clone() throws CloneNotSupportedException ;	
 }

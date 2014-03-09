@@ -23,8 +23,11 @@ public class Motor
 	{
 		return(-0.00664235+1.20157*Vol+0.0732154*Vol*Vol);
 	}
+
 	public void setValue(double s)
 	{
+		//Motor value in range(0,1)
+		s*=MaxVol;
 		double Vol0;
 		Vol0=s;
 		if(s>=MaxVol)
@@ -42,8 +45,10 @@ public class Motor
 		beta=(Vol0-Vol)*150*2*3.1415926535/dt0;
 		Vol=Vol0;
 	}
-	public Motor clone()
+
+	public Motor clone() throws CloneNotSupportedException
 	{
+		super.clone();
 		Motor res=new Motor(MaxVol);
 		return res;
 	}
