@@ -4,24 +4,26 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.control;
 
 /**
  *
  * @author xuhao
  */
-class Motor
+public class Motor
 {
+    //TODO:重做反力矩
 	double Vol=0;
 		//14inch*7 m=0.026g J=1/12ml*l=2.74*10e-4
-	double J=10;
-	double beta=0;
+	public double J=10;
+	public double beta=0;
 	double MaxVol=22.2;
-	double Force()
+	double dt0=0.1;
+	public double Force()
 	{
 		return(-0.00664235+1.20157*Vol+0.0732154*Vol*Vol);
 	}
-	void setValue(double s)
+	public void setValue(double s)
 	{
 		double Vol0;
 		Vol0=s;
@@ -40,16 +42,18 @@ class Motor
 		beta=(Vol0-Vol)*150*2*3.1415926535/dt0;
 		Vol=Vol0;
 	}
-	Motor clone()
+	public Motor clone()
 	{
-		Motor res=new Motor();
+		Motor res=new Motor(MaxVol);
+		return res;
 	}
-	Motor()
+	//TODO: 重新测量电机参数
+	public Motor()
 	{
 
 	}
-	Motor(double max)
+	public Motor(double max)
 	{
-		
+		MaxVol=max;	
 	}
 }

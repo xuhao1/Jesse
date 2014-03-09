@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.GA;
 
 /**
  *
@@ -14,7 +14,7 @@ package jesse;
 public abstract class  Gene_Algorithm 
 {
 
-	int maxn;
+	protected int maxn;
 	Population Pop0;
 
 	public void Develop() throws Exception
@@ -55,9 +55,10 @@ public abstract class  Gene_Algorithm
 			Pop0=Poptem;
 		}
 	}
-	public abstract Population mkPopluation();
-	public Gene_Algorithm(Population Pop0)
+	public abstract Population mkPopulation();
+	public Gene_Algorithm(int maxn)
 	{
-		this.maxn=Pop0.maxn;
+		this.maxn=maxn;
+		Pop0=mkPopulation();
 	}
 }

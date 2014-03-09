@@ -4,26 +4,16 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.GA_ANN;
 
 /**
  *
  * @author xuhao
  */
-class Evo_Ann extends ann
-{
-
-    public void Varition() 
-    {
-    	//TODO finish
-    }
-
-    public void Cross(Evo_Individual a) 
-    {
-    	//TODO finish
-    }
-
-}
+import jesse.GA.*;
+import jesse.*;
+import jesse.motion.*;
+import jesse.control.*;
 
 public class Evo_Mass extends Mass 
 			implements ControlBody,Evo_Individual
@@ -31,12 +21,13 @@ public class Evo_Mass extends Mass
 	Motor mo1;
 	Evo_Ann brain;
 	double P;
-   	Vec SumForce()
+   	protected Vec SumForce()
    	{
-   		Vec res;
-   		res.z=mo.Force();
+   		Vec res=new Vec();
+   		res.z=mo1.Force();
+   		return res;
    	}
-   	void Control()
+   	public void Control()
    	{
 
    	}
@@ -46,22 +37,26 @@ public class Evo_Mass extends Mass
    	}
 
     @Override
-    public void Varition() {
+    public void Varition() 
+    {
+    	brain.Varition();
+    }
+
+    @Override
+    public void Cross(Evo_Individual a) 
+    {
+    	this.brain.Cross( ((Evo_Mass)a).brain);
+    }
+
+    @Override
+    public double Appra() 
+    {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void Cross(Evo_Individual a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public double Appra() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String report() {
+    public String report() 
+    {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -80,6 +75,9 @@ public class Evo_Mass extends Mass
     @Override
     public Evo_Individual clone() 
     {
-    	Evo_Mass res=new Evo_Mass();
+    	Evo_Mass res=new Evo_Mass(this.m);
+    	res.mo1=this.mo1.clone();
+    	res.brain=this.brain.clone();
+    	return res;
     }
 }

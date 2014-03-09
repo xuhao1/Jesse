@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.motion;
 
 /**
  *
@@ -12,22 +12,22 @@ package jesse;
  */
 public abstract class RigidBody  extends Mass 
 {
-	double Jx,Jy,Jz;
+	protected double Jx,Jy,Jz;
 	protected Vec Torque=new Vec(0,0,0);
-	Vec n=new Vec(0,0,1);	
-	Vec ome_rig=new Vec();//ome_rig is base on xyz on body
-	Vec omega=new Vec();
-	double theta=0,psi=0, fai=0;
+	public Vec n=new Vec(0,0,1);	
+	public Vec ome_rig=new Vec();//ome_rig is base on xyz on body
+	public Vec omega=new Vec();
+	public double theta=0,psi=0, fai=0;
 	//psi quejiao
 	//var yuande
-	RigidBody(double m0,double jx,double jy,double jz)
+	public RigidBody(double m0,double jx,double jy,double jz)
 	{
 		super(m0);
 		Jx=jx;
 		Jy=jy;
 		Jz=jz;
 	}
-	Vec Rotation(Vec r0,double theta,double fai,double psi)
+	protected Vec Rotation(Vec r0,double theta,double fai,double psi)
 	{
 		Vec r1=new Vec();
 		r1.x=r0.x*Math.cos(theta)*Math.cos(fai)+r0.y*Math.cos(theta)*Math.sin(fai)-r0.z*Math.sin(theta);
@@ -39,7 +39,7 @@ public abstract class RigidBody  extends Mass
 				r0.z*Math.cos(psi)*Math.cos(theta);
 		return r1;
 	}
-	Vec InRotation(Vec r0,double theta,double fai,double psi)
+	protected Vec InRotation(Vec r0,double theta,double fai,double psi)
 	{
 		double t;
 		Vec r1=new Vec(r0);
@@ -48,7 +48,7 @@ public abstract class RigidBody  extends Mass
 		t=r1.x;r1.x=r1.z;r1.z=t;
 		return r1;
 	}
-	double adjustangle(double a)
+	private double adjustangle(double a)
 	{
 		while(a>2*Math.PI)
 			a-=2*Math.PI;
@@ -56,7 +56,7 @@ public abstract class RigidBody  extends Mass
 			a+=2*Math.PI;
 		return(a);
 	}
-	abstract Vec SumTorque();
+	public abstract Vec SumTorque();
 	InttQueue fthe=new InttQueue(),ffai=new InttQueue(),fpsi=new InttQueue();
 	InttQueue fwx=new InttQueue(),fwy=new InttQueue(),fwz=new InttQueue();
 	public void simubydt(double dt)
@@ -131,7 +131,7 @@ public abstract class RigidBody  extends Mass
 		System.out.print("psi: ");
 		System.out.println(psi);
 		System.out.print("w: ");
-		ome_rig.print();
+		System.out.print(ome_rig);
 	}
 }
 

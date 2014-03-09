@@ -4,13 +4,19 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.GA;
 
 /**
  *
  * @author xuhao
  */
-public interface ControlBody 
+public interface Evo_Individual
 {
-	void Control();
+	void Varition();
+	void Cross(Evo_Individual a);
+	double Appra();
+	String report();
+	void setP(double P);
+	double getP();
+	Evo_Individual clone();	
 }

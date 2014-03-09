@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.motion;
 
 /**
  *
@@ -13,10 +13,11 @@ package jesse;
  */
 public abstract class Mass
 {
-	double m=1;
+    
+	public double m=1;
 	
-	protected Vec rad=new Vec(0,0,0),vel=new Vec(0,0,0);
-	Vec Acc=new Vec(0,0,0);
+	public Vec rad=new Vec(0,0,0),vel=new Vec(0,0,0);
+	public Vec Acc=new Vec(0,0,0);
 	protected Vec Force=new Vec(0,0,0);
 	private InttQueue inttdvx=new InttQueue();
 	private InttQueue inttdvy=new InttQueue();
@@ -24,8 +25,8 @@ public abstract class Mass
 	private InttQueue inttdsx=new InttQueue();
 	private InttQueue inttdsy=new InttQueue();
 	private InttQueue inttdsz=new InttQueue();
-	abstract Vec SumForce();
-	void simubydt(double dt)
+	protected abstract Vec SumForce();
+	public void simubydt(double dt)
 	{
 		Force=SumForce();
 		Vec dv=new Vec(0,0,0);
@@ -59,7 +60,7 @@ public abstract class Mass
 		rad.z+=ds.z;
 	
 	}
-	Mass(double m0)
+	public Mass(double m0)
 	{
 		m=m0;
 	}

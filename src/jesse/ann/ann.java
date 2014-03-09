@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.ann;
 
 /**
  *
@@ -13,7 +13,7 @@ package jesse;
 
 import Jama.Matrix;
 
-class ann
+public class ann
 {
 	Matrix hide,output,input2hide,hide2output;
 

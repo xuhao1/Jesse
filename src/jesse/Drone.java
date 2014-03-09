@@ -11,6 +11,9 @@ package jesse;
  * @author xuhao
  */
 
+import jesse.motion.*;
+import jesse.control.*;
+
 public class Drone extends RigidBody
 {
 	double dt0=0;
@@ -22,8 +25,8 @@ public class Drone extends RigidBody
 	Vec Mc=new Vec(0,0,0);
 	Vec Gravity;
 	double raduis=0.375;
-	Motors[] Motor=new Motors[5];
-	Vec SumForce()
+	Motor[] Motor=new Motor[4];
+	public Vec SumForce()
 	{
 		int i;
 		double fe=0;
@@ -34,13 +37,13 @@ public class Drone extends RigidBody
 		return res;
 	}
 
-	Vec SumTorque()
+	public Vec SumTorque()
 	{
 		Vec m1;
 		m1=InRotation(M,theta,fai,psi);
-		//Mc.x=(Motor[2].Force()-Motor[4].Force())*raduis;
-		//Mc.y=(Motor[1].Force()-Motor[3].Force())*raduis;
-		Mc.z=(Motor[1].beta+Motor[3].beta-Motor[4].beta-Motor[2].beta)*Motor[1].J;
+		//Mc.x=(Motor[1].Force()-Motor[3].Force())*raduis;
+		//Mc.y=(Motor[0].Force()-Motor[2].Force())*raduis;
+		Mc.z=(Motor[0].beta+Motor[2].beta-Motor[3].beta-Motor[1].beta)*Motor[1].J;
 
 		m1.x+=Mc.x;
 		m1.y+=Mc.y;
@@ -52,10 +55,10 @@ public class Drone extends RigidBody
 		try
 		{
 			//System.out.format("thr:%f\n",thr);
-			Motor[1].setValue(thr - ail - rud);
-			Motor[2].setValue(thr - ele + rud);
-			Motor[3].setValue(thr + ail - rud);
-			Motor[4].setValue(thr + ele + rud);
+			Motor[0].setValue(thr - ail - rud);
+			Motor[1].setValue(thr - ele + rud);
+			Motor[2].setValue(thr + ail - rud);
+			Motor[3].setValue(thr + ele + rud);
 		}
 		catch(NullPointerException e)
 		{
@@ -77,7 +80,7 @@ public class Drone extends RigidBody
 		super(m0,jx0,jy0,jz0);
 		Gravity=new Vec(0,0,-m0*9.8);
 		for(int i=0;i<5;i++)
-			Motor[i]=new Motors();
+			Motor[i]=new Motor();
 		k=k0;
 		kn=kn0;
 	}
@@ -88,7 +91,7 @@ public class Drone extends RigidBody
 		Gravity=new Vec(0,0,-a.m*9.8);
 		int i;
 		for(i=0;i<5;i++)
-			Motor[i]=new Motors();
+			Motor[i]=new Motor();
 		kn=a.kn;
 		for(i=0;i<=kn;i++)
 			k[i]=a.k[i];

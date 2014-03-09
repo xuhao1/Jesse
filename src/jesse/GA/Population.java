@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package jesse;
+package jesse.GA;
 
 import java.util.*;
 
@@ -12,11 +12,22 @@ import java.util.*;
  *
  * @author xuhao
  */
+class PopulationException extends Exception
+{
+	public PopulationException()
+	{
+
+	}
+	public PopulationException(String ErrMsg)
+	{
+		super(ErrMsg);
+	}
+}
 public class Population 
 {
 	Vector<Evo_Individual> data;
 	int maxn;
-	Evo_Individual RWS()
+	Evo_Individual RWS()throws Exception
 	{
 		double m=0;
 		double r=Math.random();
@@ -27,8 +38,7 @@ public class Population
 			if(r<=m)
 				return a.clone();
 		}
-		//TODO:Throws Exception
-		return null;
+		throw new PopulationException("RWS Wrong!");
 	}
 
 	double [] getAppra()
@@ -80,18 +90,17 @@ public class Population
 
 	void add(Evo_Individual a)
 	{
-		//TODO 将Add函数加入数量限制等
 		if(data.size()<maxn)
 			data.add(a);
 	}
 
-	Population(int maxn)	
+	public Population(int maxn)	
 	{
 		//给出容量限制
 		this.maxn=maxn;
 	}
 
-	Population()
+	public Population()
 	{
 		data=new Vector<Evo_Individual>();
 	}
