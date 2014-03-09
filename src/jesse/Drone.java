@@ -17,38 +17,7 @@ public class Drone extends RigidBody
 	int kn=0;
 	double k[]=new double[30];
 	double thr=0,ele=0,rud=0,ail=0;
-	class Motors
-	{
-		double Vol=0;
-		//14inch*7 m=0.026g J=1/12ml*l=2.74*10e-4
-		double J=10;
-		double beta=0;
-
-		double Force()
-		{
-			return(-0.00664235+1.20157*Vol+0.0732154*Vol*Vol);
-		}
-		void setValue(double s)
-		{
-			double Vol0;
-			Vol0=s;
-			if(s>=11.1)
-				Vol0=11.1;
-			if(s<=0)
-				Vol0=0;
-
-			if(Math.abs(Vol0-Vol)>3.7*dt0)
-			{
-				if(Vol>Vol0)
-					Vol0=Vol-3.7*dt0;
-				else
-					Vol0=Vol+3.7*dt0;
-			}
-			beta=(Vol0-Vol)*150*2*3.1415926535/dt0;
-			Vol=Vol0;
-		}
-
-	}
+	
 	Vec M=new Vec(0,0,0);
 	Vec Mc=new Vec(0,0,0);
 	Vec Gravity;

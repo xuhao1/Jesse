@@ -10,13 +10,7 @@ package jesse;
  *
  * @author xuhao
  */
-public interface Evo_Individual
+public interface ControlBody 
 {
-	void Varition();
-	void Cross(Evo_Individual a);
-	double Appra();
-	String report();
-	void setP(double P);
-	double getP();
-	Evo_Individual clone();	
+	void Control();
 }
