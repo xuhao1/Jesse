@@ -40,6 +40,10 @@ public class Population
 		}
 		throw new PopulationException("RWS Wrong!");
 	}
+	static double AppraToP(double Appra)
+	{
+		return Appra*Appra;
+	}
 
 	double [] getAppra()
 	{
@@ -61,7 +65,7 @@ public class Population
 		int i;
 		double[] P=new double[Number()];
 		for(i=0;i<Appra.length;i++)
-			P[i]=Math.exp(Appra[i]);
+			P[i]=AppraToP(Appra[i]);
 		for(i=0;i<Appra.length;i++)
 			sum+=P[i];
 		for(i=0;i<Appra.length;i++)
@@ -88,7 +92,7 @@ public class Population
 		return data.size();
 	}
 
-	void add(Evo_Individual a)
+	public void add(Evo_Individual a)
 	{
 		if(data.size()<maxn)
 			data.add(a);
@@ -98,6 +102,7 @@ public class Population
 	{
 		//给出容量限制
 		this.maxn=maxn;
+		data=new Vector<Evo_Individual>();
 	}
 
 	public Population()

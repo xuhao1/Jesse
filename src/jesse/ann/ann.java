@@ -12,9 +12,10 @@ package jesse.ann;
  */
 
 import Jama.Matrix;
-
+//TODO 制定储存格式
 public class ann
 {
+	//TODO make Exceptions 
 	protected Matrix hide,output,input2hide,hide2output;
 
 	public ann(int input_num,int hide_num,int output_num)
@@ -23,7 +24,6 @@ public class ann
 		output 	= new Matrix(output_num,1);
 		input2hide =new Matrix(input_num,hide_num);
 		hide2output=new Matrix(hide_num,output_num);
-		RandomLize();
 	}
 	public ann(Matrix input2hide,Matrix hide2output)
 	{
@@ -31,25 +31,24 @@ public class ann
 		this.input2hide=(Matrix) input2hide.clone();
 		this.hide2output=(Matrix) hide2output.clone();
 	}
-	public void RandomLize()
+	public void Randomlize(double randRatio)
 	{
-		RandomLize(input2hide);
-		RandomLize(hide2output);
+		Randomlize(input2hide,randRatio);
+		Randomlize(hide2output,randRatio);
 	}
-	void RandomLize(Matrix a)
+	protected void Randomlize(Matrix a,double randRatio)
 	{
 
 		double[][] _array=a.getArray();
 		for(int i=0;i<_array.length;i++)
 			for(int j=0;j<_array[i].length;j++)
 			{
-				_array[i][j]=Math.random()*0.5-0.25;
+				_array[i][j]=Math.random()*randRatio-randRatio/2;
 			}
 	}
 	public Matrix CalOut(Matrix input)
 	{
 		
-		System.out.println(PrintMat(input));
 		hide=Sigmoid(input.times(input2hide));
 		output=Sigmoid(hide.times(hide2output));	
 		

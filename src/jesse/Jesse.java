@@ -10,8 +10,9 @@ package jesse;
  *
  * @author xuhao
  */
-public class Jesse {
-
+public class Jesse 
+{
+	//TODO 构建GUI
     /**
      * @param args the command line arguments
      */

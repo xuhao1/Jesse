@@ -17,7 +17,7 @@ public abstract class  Gene_Algorithm
 	protected int maxn;
 	Population Pop0;
 
-	public void Develop() throws Exception
+	public void Develop(int step) throws Exception
 	{
 		int i,j,n;
 		double m;
@@ -25,17 +25,18 @@ public abstract class  Gene_Algorithm
 		Evo_Individual t0,t1;
 		double mini=10000;
 		int mi=0;
-		for(j=0;j<100;j++)
+		for(j=0;j<step;j++)
 		{
 			Pop0.ConfP();
 
 			Evo_Individual best=Pop0.FindBest();
-			System.out.println(best);
+			System.out.format("Round :%d Best:%s\n",j,best);
+			best.Graph();
 			Poptem =new Population(maxn);
 			//reset sucessfully
 			//make new pop
 			n=-1;
-			while(n<maxn)
+			while(Poptem.Number()<maxn)
 			{
 				t0=Pop0.RWS();
 				t1=Pop0.RWS();
@@ -55,10 +56,23 @@ public abstract class  Gene_Algorithm
 			Pop0=Poptem;
 		}
 	}
-	public abstract Population mkPopulation();
+
+	public abstract Evo_Individual mkIndividual();
+
+	void SetPopulation()
+	{
+		Pop0=new Population(maxn);
+		Evo_Individual em0;
+		for(int i=0;i<maxn;i++)
+		{
+			em0=mkIndividual();
+			Pop0.add(em0);
+		}
+	}
+
 	public Gene_Algorithm(int maxn)
 	{
 		this.maxn=maxn;
-		Pop0=mkPopulation();
+		SetPopulation();
 	}
 }

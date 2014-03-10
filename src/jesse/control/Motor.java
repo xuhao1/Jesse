@@ -48,14 +48,14 @@ public class Motor
 
 	public Motor clone() throws CloneNotSupportedException
 	{
-		super.clone();
+		//super.clone();
 		Motor res=new Motor(MaxVol);
 		return res;
 	}
 	//TODO: 重新测量电机参数
 	public Motor()
 	{
-
+		MaxVol=22.2;
 	}
 	public Motor(double max)
 	{
