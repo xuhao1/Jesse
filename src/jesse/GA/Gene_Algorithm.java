@@ -15,7 +15,8 @@ public abstract class  Gene_Algorithm
 {
 
 	protected int maxn;
-	Population Pop0;
+	public Population Pop0;
+	public abstract double MeanAppra();
 	protected Evo_Individual best;
 	public void reportBest(Evo_Individual best,int j)
 	{
@@ -37,8 +38,7 @@ public abstract class  Gene_Algorithm
 			reportBest(best,j);
 			//reset sucessfully
 			//make new pop
-			n=-1;
-
+			System.out.printf("Appra :%f\n",MeanAppra() );
 			while(!Pop0.full(maxn/3))
 			{
 				t0=Pop0.RWS();
@@ -53,6 +53,7 @@ public abstract class  Gene_Algorithm
 				m=Math.random();
 				if(m<0.3)
 					t1.Varition();
+
 				Pop0.addtoNext(t0);
 				Pop0.addtoNext(t1);
 			}

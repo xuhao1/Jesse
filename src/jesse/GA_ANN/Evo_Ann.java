@@ -71,7 +71,7 @@ public class Evo_Ann extends ann
     public Evo_Ann(Matrix input2hide,Matrix hide2output)
     {
         super(input2hide,hide2output);
-        Randomlize(5);
+        Randomlize(10);
     }
 	Evo_Ann(int input_num,int hide_num,int output_num)
 	{

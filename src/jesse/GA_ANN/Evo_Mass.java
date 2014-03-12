@@ -142,7 +142,9 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 		}
     double mean=Mean(z_his);
     double sigma2=Variance(z_his);
+
     Appra=1/(mean*mean);
+    
 		return Appra;
 	}
 

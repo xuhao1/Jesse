@@ -23,9 +23,10 @@ class PopulationException extends Exception
 }
 public class Population 
 {
-	Vector<Evo_Individual> data;
+	public Vector<Evo_Individual> data;
 	Vector<Evo_Individual> temp;
 	int maxn;
+
 	Evo_Individual RWS()throws Exception
 	{
 		//TODO 细分RWS错误
@@ -99,7 +100,11 @@ public class Population
 			P[i]=P[i]/sum;
 			data.get(i).setP(P[i]);
 		}
-		sort(0,data.size()-1);
+		//sort(0,data.size()-1);
+		for(int i=0;i<data.size();i++)
+		{
+			System.out.println(data.get(i));
+		}
 	}
 
 	Evo_Individual FindBest()
