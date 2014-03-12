@@ -16,10 +16,6 @@ import java.util.logging.Logger;
  */
 class PopulationException extends Exception
 {
-	public PopulationException()
-	{
-
-	}
 	public PopulationException(String ErrMsg)
 	{
 		super(ErrMsg);

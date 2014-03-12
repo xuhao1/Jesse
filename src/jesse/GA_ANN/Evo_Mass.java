@@ -99,6 +99,26 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
     Acc=new Vec(0,0,0);
   }
 	public Vector<Double> his_t,his_z;
+  private static double Variance(double [] z)
+  {
+    double res=0,mean=Mean(z);
+    for(int i=0;i<z.length;i++)
+    {
+      res+=(z[i]-mean)*(z[i]-mean);
+    }
+    res/=z.length;
+    return res;
+  }
+  private static double Mean(double[] z)
+  {
+    double res=0;
+    for(int i=0;i<z.length;i++)
+    {
+      res+=z[i];
+    }
+    res/=z.length;
+    return res;
+  }
 	@Override
 	public double Appra() 
 	{
@@ -111,30 +131,19 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 		//int miniStep=new Double(1/dt).intValue();
 		int maxStep=0;
     double square=0;
+    double [] z_his=new double[new Double(t/dt).intValue()];
     reset();
 		for(int i=0;i<t/dt;i++)
 		{
 			this.simubydt(dt);
 			a=this.rad;
 			Vec RandomForce=new Vec(0,0,0);
-			RandomForce.z=Math.random()-0.5;
-			//this.vel.z+=RandomForce.z/100;
-			   if(Math.abs(a.z)<0.1)
-			   {
-			   flapsum++;
-			   flap++;
-			   }
-			   else
-			   flap=0;
-			   if(flap>maxStep)
-			   {
-          maxStep=flap;
-			   }
-			square+=a.z*a.z;
+      z_his[i]=a.z;
 		}
-		square=Math.sqrt(square/(t/dt));
-		Appra=10/square+maxStep;
-		return Appra;//Appra;
+    double mean=Mean(z_his);
+    double sigma2=Variance(z_his);
+    Appra=1/(mean*mean);
+		return Appra;
 	}
 
 	@Override

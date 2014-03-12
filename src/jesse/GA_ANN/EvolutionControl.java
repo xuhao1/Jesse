@@ -115,12 +115,10 @@ public class EvolutionControl extends javax.swing.JFrame
     class threads implements Runnable
     {
         int k;Evo_Mass best;
+        int num,step;
         public void run() 
         {
             try {
-                System.out.println(jTextField2.getText() );
-				int num=Integer.valueOf(jTextField1.getText()  ).intValue();
-				int step=Integer.valueOf(jTextField2.getText() ).intValue();
                 new GA_Ann_Mas(1000).DisplayDevelop(jPanel1,step);
             } catch (Exception ex) {
                 Logger.getLogger(EvolutionControl.class.getName()).log(Level.SEVERE, null, ex);
@@ -128,6 +126,9 @@ public class EvolutionControl extends javax.swing.JFrame
         }
         threads()
         {
+            num=Integer.valueOf(jTextField1.getText()  ).intValue();
+            step=Integer.valueOf(jTextField2.getText() ).intValue();
+            System.out.printf("Start Develop number: %d ,Step :%d ",num,step);
         }
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
