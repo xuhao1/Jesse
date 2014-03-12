@@ -92,6 +92,7 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 	{
 		his_z=new Vector<Double>();
 		his_t=new Vector<Double>();
+		reset();
 		double dt=1e-3;
 		//this.rad.z=Math.random()*10-5;
 		for(int i=0;i<t/dt;i++)
@@ -132,6 +133,7 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 		res/=z.length;
 		return res;
 	}
+	double [] z_his;
 	@Override
 	public double Appra() 
 	{
@@ -144,22 +146,25 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 		//int miniStep=new Double(1/dt).intValue();
 		int maxStep=0;
 		double square=0;
-		double [] z_his=new double[new Double(t/dt).intValue()];
+		z_his=new double[new Double(t/dt).intValue()];
+		Vec RandomForce=new Vec(0,0,0);
 		reset();
 		for(int i=0;i<t/dt;i++)
 		{
 			this.simubydt(dt);
 			a=this.rad;
-			//Vec RandomForce=new Vec(0,0,0);
+			RandomForce.z=Math.random()*0.1-0.05;
+			vel.z+=RandomForce.z;
 			z_his[i]=a.z;
 		}
 
-		double mean=Mean(z_his);
-		double sigma2=Variance(z_his);
+		mean=Mean(z_his);
+		sigma2=Variance(z_his);
 		Appra=1/(mean*mean+sigma2*10);
 
 		return Appra;
 	}
+	double mean,sigma2;
 	@Override
 	public double getAppra()
 	{
@@ -168,7 +173,7 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 	@Override
 	public String toString() 
 	{
-		return String.format("id :%dmass :P:%f ,Appra:%f",id,getP(),Appra);
+		return String.format("id :%dmass :P:%f ,Appra:%f mean:%f sigma2:%f",id,getP(),Appra,mean,sigma2);
 	}
 
 	class threads implements Runnable
@@ -178,12 +183,17 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
         public void run() 
         {
             //TODO 修改画图
-            father.run(60); 
-            System.out.println("Draw");
             int k=dv.getNext();
+        	/*
+            father.run(60); 
             for(int i=0;i<father.his_t.size();i++)
             {
                 dv.addData(k,father.his_t.get(i),father.his_z.get(i));
+            }
+            */
+            for(int i=0;i<father.z_his.length;i++)
+            {
+                dv.addData(k,i,father.z_his[i]);
             }
         }
         threads(Evo_Mass fa)
@@ -200,7 +210,7 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
     @Override 
     public void Report()
     {
-        System.out.format("Best:%s\n",id ,this);
+        System.out.format("Best:%s\n",this);
         if(this.dv!=null)
         {
             ExecutorService exe=Executors.newFixedThreadPool(1);
@@ -227,6 +237,7 @@ public class Evo_Mass extends Mass implements ControlBody,Evo_Individual
 		res.P=this.P;
 		res.Appra=this.Appra;
 		res.mo1=this.mo1.clone();
+		res.z_his=this.z_his.clone();
 		res.brain=this.brain.clone();
 		return res;
 	}
