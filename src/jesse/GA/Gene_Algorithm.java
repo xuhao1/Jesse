@@ -32,14 +32,14 @@ public abstract class  Gene_Algorithm
 		int mi=0;
 		for(j=0;j<step;j++)
 		{
-			System.out.format("Round:%d\n",j);
+			System.out.format("Round:%d Num:%d\n",j,Pop0.data.size() );
 			Pop0.ConfP();
 			best=Pop0.FindBest();
-			reportBest(best,j);
+			best.Report();
 			//reset sucessfully
 			//make new pop
 			System.out.printf("Appra :%f\n",MeanAppra() );
-			while(!Pop0.full(maxn/3))
+			while(!Pop0.full(maxn*3/4))
 			{
 				t0=Pop0.RWS();
 				t1=Pop0.RWS();
@@ -63,7 +63,7 @@ public abstract class  Gene_Algorithm
 
 	public abstract Evo_Individual mkIndividual();
 
-	void SetPopulation()
+	protected void SetPopulation()
 	{
 		Pop0=new Population(maxn);
 		Evo_Individual em0;
@@ -74,9 +74,11 @@ public abstract class  Gene_Algorithm
 		}
 	}
 
-	public Gene_Algorithm(int maxn)
+	/*
+	protected Gene_Algorithm(int maxn)
 	{
 		this.maxn=maxn;
 		SetPopulation();
 	}
+	*/
 }

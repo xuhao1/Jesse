@@ -16,7 +16,7 @@ import Jama.Matrix;
 public class ann
 {
 	//TODO make Exceptions 
-	protected Matrix hide,output,input2hide,hide2output;
+	public Matrix hide,output,input2hide,hide2output;
 
 	public ann(int input_num,int hide_num,int output_num)
 	{
@@ -74,7 +74,7 @@ public class ann
 	{
 		return 1/(1+Math.exp(-x));	
 	}
-	static String PrintMat(Matrix a)
+	public static String PrintMat(Matrix a)
 	{
 		String res="";
 		for(int i=0;i<a.getRowDimension();i++)
@@ -92,6 +92,7 @@ public class ann
 	{
 		double[] test={3,4};
 		ann testa=new ann(2,5,1);
-		System.out.println(testa.CalOut(test)[0]);
+		testa.Randomlize(10);
+		System.out.println(PrintMat(testa.input2hide));
 	}
 }

@@ -22,6 +22,7 @@ class Evo_Ann_Exception extends Exception
         super(ErrMsg);
     }
 }
+//TODO Make self-upgrade
 public class Evo_Ann extends ann
 {
     final static double Var_Amp=0.1;
@@ -68,14 +69,14 @@ public class Evo_Ann extends ann
         //super.clone();
     	return new Evo_Ann(input2hide,hide2output);
     }
-    public Evo_Ann(Matrix input2hide,Matrix hide2output)
+    private Evo_Ann(Matrix input2hide,Matrix hide2output)
     {
         super(input2hide,hide2output);
-        Randomlize(10);
     }
 	Evo_Ann(int input_num,int hide_num,int output_num)
 	{
 		super(input_num,hide_num,output_num);
+        Randomlize(10);
 	}
 }
  

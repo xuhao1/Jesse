@@ -119,7 +119,7 @@ public class EvolutionControl extends javax.swing.JFrame
         public void run() 
         {
             try {
-                new GA_Ann_Mas(1000).DisplayDevelop(jPanel1,step);
+                new GA_Ann_Mas(num,jPanel1).DisplayDevelop(step);
             } catch (Exception ex) {
                 Logger.getLogger(EvolutionControl.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -12,7 +12,7 @@ package jesse;
  */
 
 import jesse.GA_ANN.*;
-
+import jesse.ann.ann;
 public class Jesse
 {
 	public Jesse()
@@ -21,6 +21,7 @@ public class Jesse
     public static void main(String[] args)
     {
     	EvolutionControl.main(args);
+    	//ann.main(args);
     }
     
 }

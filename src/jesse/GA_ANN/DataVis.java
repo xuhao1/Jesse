@@ -5,20 +5,14 @@
  */
 package jesse.GA_ANN;
 
-import java.lang.*;
-import java.util.*;
-import java.io.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.text.SimpleDateFormat;
 import javax.swing.*;
 import org.jfree.chart.*;
 import org.jfree.chart.axis.*;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.*;
-import org.jfree.data.time.*;
-import org.jfree.chart.plot.*;
+
 
 
 /**
@@ -33,6 +27,12 @@ public class DataVis extends javax.swing.JPanel {
 
     NumberAxis dateaxis;
     public XYSeries total[];
+    int lineid=0;
+    public int getNext()
+    {
+        lineid++;
+        return lineid-1;
+    }
     public XYSeriesCollection XYSeriescollection;
     XYLineAndShapeRenderer xylineandshaperenderer;
     JFreeChart createChart()//Here Input MillSecond
@@ -56,7 +56,7 @@ public class DataVis extends javax.swing.JPanel {
         xylineandshaperenderer.setSeriesStroke(0, new BasicStroke(1F, 0, 2));
         xylineandshaperenderer.setFillPaint(new Color(30,30,220),true );
         
-        //Conaxis.setRange(-0.5,0.5);
+        Conaxis.setRange(-1,1);
         Conaxis.setAutoRange(true);
         Conaxis.setAutoRangeIncludesZero(false);
 
@@ -73,7 +73,7 @@ public class DataVis extends javax.swing.JPanel {
         total[k].add(a,b);
     }
     
-    public DataVis() 
+    public DataVis()
     {
         initComponents();
         JFreeChart jct=createChart();
@@ -83,6 +83,7 @@ public class DataVis extends javax.swing.JPanel {
     }
     public void clear()
     {
+        lineid=0;
         for(int i=0;i<total.length;i++)
             total[i].clear();
     }

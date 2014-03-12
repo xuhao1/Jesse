@@ -9,6 +9,7 @@ package jesse.GA;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.concurrent.*;
 
 /*
  *
@@ -45,17 +46,41 @@ public class Population
 	{
 		return Appra;
 	}
-
+	class threads implements Runnable
+	{
+		Evo_Individual it;
+		public void run()
+		{
+			it.Appra();
+		}	
+		threads (Evo_Individual it)
+		{
+			this.it=it;
+		}
+	}
 	double [] getAppra()
 	{
-		//TODO:Parallel It
-		double [] Appra=new double[data.size()];
+		double [] Appra=new double[data.size()];	
+		try{
 
-		for (int i=0;i<data.size();i++)
-		{
-			Appra[i]=data.get(i).Appra();
+			ExecutorService exe=Executors.newFixedThreadPool(6);
+
+			for (int i=0;i<data.size();i++)
+			{
+				exe.execute(new threads(data.get(i)));
+			}
+			exe.shutdown();
+			exe.awaitTermination(100,TimeUnit.SECONDS);	
+			
+			for (int i=0;i<data.size();i++)
+			{
+				Appra[i]=data.get(i).getAppra();
+			}
 		}
-
+		catch(Exception ex)
+		{
+			System.err.println(ex);
+		}
 		return Appra;
 	}
 	void sort(int l,int r)
@@ -100,18 +125,20 @@ public class Population
 			P[i]=P[i]/sum;
 			data.get(i).setP(P[i]);
 		}
-		//sort(0,data.size()-1);
+		sort(0,data.size()-1);
+		/*
 		for(int i=0;i<data.size();i++)
 		{
 			System.out.println(data.get(i));
 		}
+		*/
 	}
 
 	Evo_Individual FindBest()
 	{
 		try{
-		if(data.size()==0)
-			throw new Exception("the data is empty");
+			if(data.size()==0)
+				throw new Exception("the data is empty");
 		}
 		catch(Exception e)
 		{
