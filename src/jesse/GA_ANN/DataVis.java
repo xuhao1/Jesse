@@ -56,7 +56,8 @@ public class DataVis extends javax.swing.JPanel {
         xylineandshaperenderer.setSeriesStroke(0, new BasicStroke(1F, 0, 2));
         xylineandshaperenderer.setFillPaint(new Color(30,30,220),true );
         
-        Conaxis.setRange(-0.5,0.5);
+        //Conaxis.setRange(-0.5,0.5);
+        Conaxis.setAutoRange(true);
         Conaxis.setAutoRangeIncludesZero(false);
 
         XYPlot xyplot = new XYPlot(XYSeriescollection, dateaxis, Conaxis, xylineandshaperenderer);

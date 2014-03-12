@@ -28,10 +28,11 @@ class PopulationException extends Exception
 public class Population 
 {
 	Vector<Evo_Individual> data;
+	Vector<Evo_Individual> temp;
 	int maxn;
 	Evo_Individual RWS()throws Exception
 	{
-            //TODO 细分RWS错误
+		//TODO 细分RWS错误
 		double m=0;
 		double r=Math.random();
 		int i=0;
@@ -45,7 +46,7 @@ public class Population
 	}
 	static double AppraToP(double Appra)
 	{
-		return Appra*Appra;
+		return Appra;
 	}
 
 	double [] getAppra()
@@ -63,29 +64,29 @@ public class Population
 	void sort(int l,int r)
 	{
 		int i=l,j=r;
-        Evo_Individual k;
+		Evo_Individual k;
 		try
 		{
-			k=data.get(l).clone();
+			k=data.get(l);
 			while(i<j)
 			{
 				while(i<j&&data.get(j).getP()<=k.getP())
 					j--;
-				data.set(i,data.get(j).clone() );
+				data.set(i,data.get(j) );
 				while(i<j&&data.get(i).getP()>k.getP())
 					i++;
-				data.set(j,data.get(i).clone() );
+				data.set(j,data.get(i));
 			}
 			data.set(i,k);
-                        
+
 			if(i-l>1)
 				sort(l,i-1);
 			if(r-i>1)
 				sort(i+1,r);
-        }
+		}
 		catch(Exception e)
 		{
-            System.out.println(e);
+			System.out.println(e);
 		}
 	}
 	void ConfP()
@@ -99,21 +100,26 @@ public class Population
 			sum+=P[i];
 		for(int i=0;i<Appra.length;i++)
 		{
-			P[i]=P[i]*(1/sum);
+			P[i]=P[i]/sum;
 			data.get(i).setP(P[i]);
 		}
-		//MayBe P is all zero or inifty now
-		System.out.println("Progressed Appra");
 		sort(0,data.size()-1);
-		System.out.println("Progressed Sort");
-		System.out.println(data.get(0).getP());
 	}
 
 	Evo_Individual FindBest()
 	{
+		try{
+		if(data.size()==0)
+			throw new Exception("the data is empty");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 		return data.get(0);
 	}
-	public void kill(int num)
+
+	protected void kill(int num)
 	{
 		int maxrange=data.size()-1;
 		for(int i=maxrange;i>maxrange-num;i--)
@@ -126,22 +132,41 @@ public class Population
 		return data.size();
 	}
 
-	//TODO 增加容量的时候减去最少的
-	public void add(Evo_Individual a)
+	void addtoNext(Evo_Individual a)
 	{
-		if(data.size()<maxn)
+		temp.add(a);
+	}
+
+	void add(Evo_Individual a)
+	{
+		if(this.data.size()<maxn)
 			data.add(a);
+	}
+	public void Merge()
+	{
+		kill(temp.size());
+		for(int i=0;i<temp.size();i++)
+			data.add(temp.get(i));
+		temp.removeAllElements();
+	}
+	public boolean full(int ma)
+	{
+		if(temp.size()+data.size()>=ma)
+			return true;
+		return false;
 	}
 
 	public Population(int maxn)	
 	{
 		//给出容量限制
 		this.maxn=maxn;
+		temp=new Vector<Evo_Individual>();
 		data=new Vector<Evo_Individual>();
 	}
 
 	public Population()
 	{
+		temp=new Vector<Evo_Individual>();
 		data=new Vector<Evo_Individual>();
 	}
 }

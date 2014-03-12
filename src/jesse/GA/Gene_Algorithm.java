@@ -33,15 +33,13 @@ public abstract class  Gene_Algorithm
 		{
 			System.out.format("Round:%d\n",j);
 			Pop0.ConfP();
-			System.out.println("I'm Here10");
 			best=Pop0.FindBest();
 			reportBest(best,j);
 			//reset sucessfully
 			//make new pop
 			n=-1;
 
-			Pop0.kill(maxn/3);
-			while(Pop0.Number()<maxn)
+			while(!Pop0.full(maxn/3))
 			{
 				t0=Pop0.RWS();
 				t1=Pop0.RWS();
@@ -55,9 +53,10 @@ public abstract class  Gene_Algorithm
 				m=Math.random();
 				if(m<0.3)
 					t1.Varition();
-				Pop0.add(t0);
-				Pop0.add(t1);
+				Pop0.addtoNext(t0);
+				Pop0.addtoNext(t1);
 			}
+			Pop0.Merge();
 		}
 	}
 

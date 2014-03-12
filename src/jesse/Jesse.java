@@ -10,9 +10,7 @@ package jesse;
  *
  * @author xuhao
  */
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+
 import jesse.GA_ANN.*;
 
 public class Jesse

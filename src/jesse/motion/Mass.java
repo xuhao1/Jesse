@@ -42,7 +42,7 @@ public abstract class Mass
 		rad.x+=ds.x;
 		
 		dv.y=Acc.y*dt;
-		inttdvy.add(dv.y);
+    		inttdvy.add(dv.y);
 		dv.y=inttdvy.Intt();
 		vel.y+=dv.y;
 		ds.y=vel.y*dt;
