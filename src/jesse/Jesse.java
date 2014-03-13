@@ -4,24 +4,24 @@
  * and open the template in the editor.
  */
 
-package jesse;
+ package jesse;
 
-/**
+ /**
  *
  * @author xuhao
  */
 
-import jesse.GA_ANN.*;
-import jesse.ann.ann;
-public class Jesse
-{
-	public Jesse()
-	{
-	}
-    public static void main(String[] args)
-    {
-    	EvolutionControl.main(args);
-    	//ann.main(args);
-    }
-    
-}
+ import jesse.GA_ANN.*;
+ import jesse.ann.ann;
+ public class Jesse
+ {
+     public Jesse()
+     {
+     }
+     public static void main(String[] args)
+     {
+         EvolutionControl.main(args);
+         //ann.main(args);
+     }
+
+ }

@@ -31,6 +31,11 @@ public class DataVis extends javax.swing.JPanel {
     public int getNext()
     {
         lineid++;
+        if(lineid>10)
+        {
+            this.clear();
+            lineid=1;
+        }
         return lineid-1;
     }
     public XYSeriesCollection XYSeriescollection;
@@ -55,7 +60,7 @@ public class DataVis extends javax.swing.JPanel {
         xylineandshaperenderer.setSeriesPaint(0, Color.green);
         xylineandshaperenderer.setSeriesStroke(0, new BasicStroke(1F, 0, 2));
         xylineandshaperenderer.setFillPaint(new Color(30,30,220),true );
-        
+
         Conaxis.setRange(-1,1);
         Conaxis.setAutoRange(true);
         Conaxis.setAutoRangeIncludesZero(false);
@@ -72,7 +77,7 @@ public class DataVis extends javax.swing.JPanel {
     {
         total[k].add(a,b);
     }
-    
+
     public DataVis()
     {
         initComponents();

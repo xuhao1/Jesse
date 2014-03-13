@@ -7,18 +7,18 @@
 package jesse.GA;
 
 /**
- *
- * @author xuhao
- */
+*
+* @author xuhao
+*/
 public interface Evo_Individual
 {
-	void Varition();
-	void Cross(Evo_Individual a);
-	double Appra();
+    void Varition();
+    void Cross(Evo_Individual a);
+    double Appra();
     double getAppra();
-	String toString();
-	void Report();
-	void setP(double P);
-	double getP();
-	Evo_Individual clone() throws CloneNotSupportedException ;	
+    String toString();
+    void Report();
+    void setP(double P);
+    double getP();
+    Evo_Individual clone() throws CloneNotSupportedException ;
 }

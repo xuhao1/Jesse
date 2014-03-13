@@ -32,14 +32,13 @@ public abstract class  Gene_Algorithm
 		int mi=0;
 		for(j=0;j<step;j++)
 		{
-			System.out.format("Round:%d Num:%d\n",j,Pop0.data.size() );
+			//System.out.format("Round:%d Num:%d\n",j,Pop0.data.size() );
 			Pop0.ConfP();
 			best=Pop0.FindBest();
 			best.Report();
-			//reset sucessfully
-			//make new pop
-			System.out.printf("Appra :%f\n",MeanAppra() );
-			while(!Pop0.full(maxn*3/4))
+			//System.out.printf("Appra :%f\n",MeanAppra() );
+			System.out.println(best.getAppra());
+			while(!Pop0.full(maxn*2/3))
 			{
 				t0=Pop0.RWS();
 				t1=Pop0.RWS();

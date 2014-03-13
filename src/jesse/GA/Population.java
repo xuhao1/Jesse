@@ -126,12 +126,6 @@ public class Population
 			data.get(i).setP(P[i]);
 		}
 		sort(0,data.size()-1);
-		/*
-		for(int i=0;i<data.size();i++)
-		{
-			System.out.println(data.get(i));
-		}
-		*/
 	}
 
 	Evo_Individual FindBest()
