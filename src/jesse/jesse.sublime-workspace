@@ -1,0 +1,1124 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"return"
+			],
+			[
+				"sim",
+				"sigma2y"
+			],
+			[
+				"sigm",
+				"sigma2y"
+			],
+			[
+				"men",
+				"meany"
+			],
+			[
+				"App",
+				"AppraofMove"
+			],
+			[
+				"sig",
+				"sigma2"
+			],
+			[
+				"si",
+				"sigma2z"
+			],
+			[
+				"mea",
+				"meanz"
+			],
+			[
+				"prin",
+				"println"
+			],
+			[
+				"mean",
+				"meanz"
+			],
+			[
+				"R",
+				"RandomForce"
+			],
+			[
+				"Ra",
+				"random"
+			],
+			[
+				"res",
+				"reset"
+			],
+			[
+				"fa",
+				"father"
+			],
+			[
+				"GA",
+				"GA_Ann_Mas"
+			],
+			[
+				"in",
+				"input2hide"
+			],
+			[
+				"r",
+				"Randomlize"
+			],
+			[
+				"Pri",
+				"print"
+			],
+			[
+				"pt",
+				"println"
+			],
+			[
+				"V",
+				"Variance"
+			],
+			[
+				"d",
+				"double"
+			],
+			[
+				"pr",
+				"private"
+			],
+			[
+				"thro",
+				"throws"
+			],
+			[
+				"get",
+				"getP"
+			],
+			[
+				"X",
+				"XYSeries"
+			],
+			[
+				"to",
+				"total"
+			],
+			[
+				"flap",
+				"flapsum"
+			],
+			[
+				"Ve",
+				"Vector"
+			],
+			[
+				"pri",
+				"println"
+			],
+			[
+				"imp",
+				"import"
+			],
+			[
+				"his",
+				"his_z"
+			],
+			[
+				"EV",
+				"Evo_Mass"
+			],
+			[
+				"Ev",
+				"Evo_Mass"
+			],
+			[
+				"hi",
+				"his_z"
+			],
+			[
+				"E",
+				"Evo_Individual"
+			],
+			[
+				"se",
+				"setLayout"
+			],
+			[
+				"Po",
+				"Poptem"
+			],
+			[
+				"Pop",
+				"Pop0"
+			],
+			[
+				"mk",
+				"mkIndividual"
+			],
+			[
+				"sum",
+				"simubydt"
+			],
+			[
+				"ca",
+				"CalOut"
+			],
+			[
+				"P",
+				"PrintMat"
+			],
+			[
+				"sup",
+				"super"
+			],
+			[
+				"Cr",
+				"CrossMatrix"
+			],
+			[
+				"arr",
+				"arrB"
+			],
+			[
+				"Var",
+				"Var_Amp"
+			],
+			[
+				"th",
+				"throw"
+			],
+			[
+				"Evo",
+				"Evo_Ann"
+			],
+			[
+				"ma",
+				"maxn"
+			],
+			[
+				"as",
+				"abstract"
+			],
+			[
+				"In",
+				"Evo_Individual"
+			],
+			[
+				"IN",
+				"Evo_Individual"
+			],
+			[
+				"POp",
+				"Pop0"
+			],
+			[
+				"con",
+				"Control"
+			],
+			[
+				"Ma",
+				"MapRes"
+			],
+			[
+				"out",
+				"output"
+			],
+			[
+				"v",
+				"Varition"
+			],
+			[
+				"Ind",
+				"Ind_Plane"
+			],
+			[
+				"o",
+				"Override"
+			],
+			[
+				"MAp",
+				"MapRes"
+			],
+			[
+				"ab",
+				"abstract"
+			],
+			[
+				"PL",
+				"PLA"
+			],
+			[
+				"ou",
+				"output"
+			],
+			[
+				"ann",
+				"annEvolution"
+			],
+			[
+				"inpu",
+				"input2hide"
+			],
+			[
+				"ge",
+				"getColumnDimension"
+			],
+			[
+				"m",
+				"Matrix"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"b",
+				"benchmark"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "GA_ANN/Evo_Mass.java",
+			"settings":
+			{
+				"buffer_size": 6044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "control/Motor.java",
+			"settings":
+			{
+				"buffer_size": 1054,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GA_ANN/EvolutionControl.java",
+			"settings":
+			{
+				"buffer_size": 7159,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GA/Evo_Individual.java",
+			"settings":
+			{
+				"buffer_size": 513,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GA/Gene_Algorithm.java",
+			"settings":
+			{
+				"buffer_size": 1537,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"aligment",
+				"Preferences: Alignment File Settings – Syntax Specific – User"
+			],
+			[
+				"AL",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"vi",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			],
+			[
+				"vin",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"vinta",
+				"Set Syntax: Vintageous Command Line"
+			],
+			[
+				"VI",
+				"Vintageous: Toggle Vim Ctrl Keys"
+			],
+			[
+				"Markdown",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"mar",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ma",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pach",
+				"Package Control: Add Channel"
+			]
+		],
+		"width": 567.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"Package Control",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/xuhao/a.txt",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA/Population.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_ANN/Evo_Mass.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA/Evo_Individual.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_ANN/GA_Ann_Mas.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA/Gene_Algorithm.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_ANN/Evo_Ann.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_ANN/DataVis.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Jesse.java",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/User/Java.sublime-settings",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/Terminal/Base File.sublime-settings",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_ANN/EvolutionControl.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/ann/ann.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Drone.java",
+		"/Users/xuhao/Develop/from_cxw/reporter_10-25/Runner.py",
+		"/Users/xuhao/Develop/test/sort.cpp",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/evolution.java",
+		"/Users/xuhao/Develop/USTC-Software2013/Source Code/gNAP/visualization/src/showConcen.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/control/Motor.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/motion/Mass.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/control/ControlBody.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Evo_Individual.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Population.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/GA_Ann_Mas.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Evo_Ann.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Evo_Mass.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Gene_Algorithm.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/ControlBody.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/ann.java",
+		"/Users/xuhao/JesseDrone/Jesse/src/jesse/Motor.java",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/ann.java",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/simrig.java",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/InttQueue.java",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/plane.java",
+		"/Users/xuhao/JesseDrone/Rigid-Motion/src/Vec.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/SimulateRigidMontion/plane.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/SimulateRigidMontion/evolution.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/SimulateRigidMontion/MapThread.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/annpilot/annEvolution.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/SimulateRigidMontion/EvolutionPlane.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/doc/神经网络.md",
+		"/Users/xuhao/Develop/Jesse/Rigid-Motion/src/simrig.java",
+		"/Users/xuhao/Develop/Jesse/Rigid-Motion/src/evolution.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/src/SimulateRigidMontion/simrig.java",
+		"/Users/xuhao/Develop/Jesse/AnnPilot/build.xml",
+		"/Users/xuhao/Develop/Jesse/Rigid-Motion/doc/神经网络.md",
+		"/Users/xuhao/Develop/Jesse/Rigid-Motion/build.xml",
+		"/Users/xuhao/Develop/Jesse/Rigid-Motion/src/ann.java",
+		"/Users/xuhao/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/xuhao/Develop/Jesse/README.md",
+		"/Users/xuhao/Develop/Jesse/drone.md",
+		"/Users/xuhao/Develop/Application/GPA.USTC/webapp/index.html",
+		"/Users/xuhao/Develop/Application/blog/app/controllers/posts_controller.rb",
+		"/Users/xuhao/Develop/Compu_Phys/stream/doc/泛函问题.synctex.gz",
+		"/Users/xuhao/Documents/ruby/guides.ruby-china.org/getting_started.html",
+		"/Users/xuhao/Source/glfw-3.0.4/README.md",
+		"/Users/xuhao/Develop/Application/GPA.USTC/login/Testfologin.ipynb",
+		"/Users/xuhao/Develop/Compu_Phys/stream/src/data.txt",
+		"/Users/xuhao/Documents/modeling/note.md",
+		"/Users/xuhao/Develop/modeling/Highway/src/data.txt",
+		"/Users/xuhao/Develop/Compu_Phys/stream/src/stream.cpp"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"jLabel1",
+			"jButton1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "GA_ANN/Evo_Mass.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4347,
+								4347
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_input_parsers":
+								[
+								],
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"x",
+									"mode_normal",
+									null
+								],
+								"sequence": "",
+								"user_input": "",
+								"xpos": 35
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "control/Motor.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								354,
+								354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_input_parsers":
+								[
+								],
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"user_input": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 325.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "GA_ANN/EvolutionControl.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1051,
+								1051
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_gluing_sequence": false,
+								"_vintageous_input_parsers":
+								[
+								],
+								"_vintageous_non_interactive": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"vi",
+									"P",
+									"mode_internal_normal",
+									null
+								],
+								"sequence": "",
+								"user_input": "",
+								"xpos": 24
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 482.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "GA/Evo_Individual.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"vintage":
+							{
+								"_vintageous_input_parsers":
+								[
+								],
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"user_input": "",
+								"xpos": 12
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "GA/Gene_Algorithm.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								947,
+								947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_gluing_sequence": false,
+								"_vintageous_input_parsers":
+								[
+								],
+								"_vintageous_non_interactive": false,
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"_vi_o",
+													{
+														"count": 1,
+														"mode": "mode_internal_normal"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "S"
+													}
+												],
+												[
+													"insert_completion",
+													{
+														"completion": "System",
+														"snippet": "",
+														"trigger": "System"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": ".out.or"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert",
+													{
+														"characters": "prin"
+													}
+												],
+												[
+													"insert_completion",
+													{
+														"completion": "println",
+														"snippet": "",
+														"trigger": "println"
+													}
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "best.get"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "Appra90"
+													}
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"left_delete",
+													null
+												],
+												[
+													"insert_snippet",
+													{
+														"contents": "($0)"
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"move",
+													{
+														"by": "characters",
+														"forward": true
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": ";"
+													}
+												]
+											]
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"user_input": "",
+								"xpos": 0
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 669.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "GA_ANN/Evo_Mass.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"vintage":
+							{
+								"_vintageous_glue_until_normal_mode": false,
+								"_vintageous_input_parsers":
+								[
+								],
+								"action": null,
+								"action_count": "",
+								"capture_register": false,
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"normal_insert_count": "1",
+								"partial_sequence": "",
+								"register": "\"",
+								"repeat_data":
+								[
+									"native",
+									[
+										"sequence",
+										{
+											"commands":
+											[
+												[
+													"_vi_o",
+													{
+														"count": 1,
+														"mode": "mode_internal_normal"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "vel.z"
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": "+=R"
+													}
+												],
+												[
+													"insert_best_completion",
+													{
+														"default": "	",
+														"exact": false
+													}
+												],
+												[
+													"insert",
+													{
+														"characters": ".z;"
+													}
+												]
+											]
+										}
+									],
+									"mode_insert",
+									null
+								],
+								"sequence": "",
+								"user_input": "",
+								"xpos": 23
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 118.0
+	},
+	"project": "jesse.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+		"_vintageous_last_buffer_search": "his_t",
+		"_vintageous_last_char_search_command": "vi_t",
+		"_vintageous_last_character_search": "o",
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/Users/xuhao/JesseDrone/Jesse/src/jesse/GA"
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
